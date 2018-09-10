@@ -14,7 +14,6 @@ class QuestionsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,9 +37,11 @@ class QuestionsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             let question = questionController.questions[indexPath.row]
             questionController.deleteQuestion(question: question)
             tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 
     // MARK: - Navigation

@@ -19,7 +19,7 @@ class AnswerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateViews()
     }
     
     @IBAction func submitAnswerBarButtonAction(_ sender: Any) {
@@ -38,8 +38,8 @@ class AnswerViewController: UIViewController {
         guard let theQuestion = question?.question,
               let theAsker = question?.asker else { return }
         
+        navigationItem.title = theQuestion
         questionLabel.text = theQuestion
         askerLabel.text = theAsker
-        navigationItem.title = theQuestion
     }
 }
