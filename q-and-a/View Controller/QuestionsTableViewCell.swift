@@ -27,6 +27,11 @@ class QuestionsTableViewCell: UITableViewCell {
         questionLabel.text = theQuestion
         askedByLabel.text = asker
         
+        if question?.answer == nil && question?.answerer == nil {
+            infoLabel.text = "Can you answer this?"
+        } else {
+            infoLabel.text = "Tap to view answer."
+        }
     }
 
 }

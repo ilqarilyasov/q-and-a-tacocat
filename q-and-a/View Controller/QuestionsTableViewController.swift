@@ -38,26 +38,21 @@ class QuestionsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
             let question = questionController.questions[indexPath.row]
             questionController.deleteQuestion(question: question)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-            //questionController.createQuestion(question: <#T##String#>, asker: <#T##String#>)
-            //tableView.insertRows(at: [indexPath], with: .automatic)
-        }    
     }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AskQuestionSegue" {
-            let AskQuestionVC = segue.destination as? AskQuestionViewController
-            AskQuestionVC?.questionController = questionController
+            guard let AskQuestionVC = segue.destination as? AskQuestionViewController else { return }
+            AskQuestionVC.questionController = questionController
+            
         } else if segue.identifier == "QuestionCellSegue" {
-            let AnswerVC = segue.destination as? AnswerViewController
-            AnswerVC?.questionController = questionController
+            guard let AnswerVC = segue.destination as? AnswerViewController else { return }
+            AnswerVC.questionController = questionController
         }
     }
 }

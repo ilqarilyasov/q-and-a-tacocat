@@ -23,11 +23,12 @@ class AnswerViewController: UIViewController {
     }
     
     @IBAction func submitAnswerBarButtonAction(_ sender: Any) {
-        guard let answerer = answererNameTextField.text,
+        guard let theQuestion = question,
+              let answerer = answererNameTextField.text,
               let answer = answerTextView.text else { return }
         
         if answer == "" && answerer == "" {
-            questionController?.updateQuestion(question: <#T##Question#>, answer: answer, answerer: answerer)
+            questionController?.updateQuestion(question: theQuestion, answer: answer, answerer: answerer)
         }
         
         navigationController?.popToRootViewController(animated: true)
@@ -39,5 +40,6 @@ class AnswerViewController: UIViewController {
         
         questionLabel.text = theQuestion
         askerLabel.text = theAsker
+        navigationItem.title = theQuestion
     }
 }
