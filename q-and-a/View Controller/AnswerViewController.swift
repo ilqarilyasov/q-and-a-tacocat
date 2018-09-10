@@ -1,5 +1,5 @@
 //
-//  AskQuestionViewController.swift
+//  AnswerViewController.swift
 //  q-and-a
 //
 //  Created by Ilgar Ilyasov on 9/10/18.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class AskQuestionViewController: UIViewController {
+class AnswerViewController: UIViewController {
 
-    @IBOutlet weak var askerNameTextField: UITextField!
-    @IBOutlet weak var questionTextView: UITextView!
+    @IBOutlet weak var askerLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var answererNameTextField: UITextField!
+    @IBOutlet weak var answerTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class AskQuestionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func submitQuestionBarButtonAction(_ sender: Any) {
+    @IBAction func submitAnswerBarButtonAction(_ sender: Any) {
         
     }
     
