@@ -22,7 +22,7 @@ class AskQuestionViewController: UIViewController {
         guard let question = questionTextView.text,
               let asker = askerNameTextField.text else { return }
         
-        if question == "" && asker == "" {
+        if question != "" && asker != "" {
             questionController?.createQuestion(question: question, asker: asker)
         }
         
