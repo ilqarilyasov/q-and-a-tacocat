@@ -72,8 +72,8 @@
 		82BD967621470B6000621148 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				82BD967321470B5500621148 /* QuestionsTableViewController.swift */,
 				82BD967721470B8D00621148 /* QuestionsTableViewCell.swift */,
+				82BD967321470B5500621148 /* QuestionsTableViewController.swift */,
 				82BD967921470E9D00621148 /* AskQuestionViewController.swift */,
 				82BD967B2147131300621148 /* AnswerViewController.swift */,
 			);

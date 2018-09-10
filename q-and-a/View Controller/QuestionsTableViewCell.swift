@@ -9,21 +9,24 @@
 import UIKit
 
 class QuestionsTableViewCell: UITableViewCell {
+    
+    // Create an instance of the model
+    var question: Question? {
+        didSet { updateViews() }
+    }
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var askedByLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func updateViews() {
+        guard let theQuestion = question?.question,
+              let asker = question?.asker else { return }
+        
+        questionLabel.text = theQuestion
+        askedByLabel.text = asker
+        
     }
 
 }
