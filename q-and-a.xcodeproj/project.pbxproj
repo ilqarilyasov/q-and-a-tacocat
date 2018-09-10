@@ -99,10 +99,10 @@
 		82E24CFF2146FC3C00094BE5 /* q-and-a */ = {
 			isa = PBXGroup;
 			children = (
-				82BD967621470B6000621148 /* View Controller */,
-				82BD967521470B5A00621148 /* View */,
-				82BD96722147002B00621148 /* Model Controller */,
 				82BD966F2146FF2900621148 /* Model */,
+				82BD96722147002B00621148 /* Model Controller */,
+				82BD967521470B5A00621148 /* View */,
+				82BD967621470B6000621148 /* View Controller */,
 				82E24D122146FEC300094BE5 /* Supporting files */,
 			);
 			path = "q-and-a";

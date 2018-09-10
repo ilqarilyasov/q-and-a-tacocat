@@ -52,6 +52,12 @@ class QuestionsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "AskQuestionSegue" {
+            let AskQuestionVC = segue.destination as? AskQuestionViewController
+            AskQuestionVC?.questionController = questionController
+        } else if segue.identifier == "QuestionCellSegue" {
+            let AnswerVC = segue.destination as? AnswerViewController
+            AnswerVC?.questionController = questionController
+        }
     }
 }
