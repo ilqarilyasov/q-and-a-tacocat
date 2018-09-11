@@ -22,6 +22,11 @@ class AnswerViewController: UIViewController {
         updateViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
+    }
+    
     @IBAction func submitAnswerBarButtonAction(_ sender: Any) {
         guard let theQuestion = self.question,
               let answerer = answererNameTextField.text,
@@ -36,10 +41,14 @@ class AnswerViewController: UIViewController {
     
     func updateViews() {
         guard let theQuestion = question?.question,
-              let theAsker = question?.asker else { return }
+              let theAsker = question?.asker,
+              let theAnswer = question?.answer,
+              let theAnswerer = question?.answerer else { return }
         
         navigationItem.title = theQuestion
         questionLabel.text = theQuestion
         askerLabel.text = theAsker
+        answererNameTextField.text = theAnswerer
+        answerTextView.text = theAnswer
     }
 }
