@@ -48,12 +48,19 @@ class QuestionsTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AskQuestionSegue" {
-            guard let AskQuestionVC = segue.destination as? AskQuestionViewController else { return }
-            AskQuestionVC.questionController = questionController
+            guard let askQuestionVC = segue.destination as? AskQuestionViewController else { return }
+            askQuestionVC.questionController = questionController
             
         } else if segue.identifier == "QuestionCellSegue" {
-            guard let AnswerVC = segue.destination as? AnswerViewController else { return }
-            AnswerVC.questionController = questionController
+            guard let answerVC = segue.destination as? AnswerViewController else { return }
+            answerVC.questionController = questionController
+            
+            // Get the index of tapped cell and find the question on that cell by that index
+            // And pass that question to the AnswerViewController
+            guard let index = tableView.indexPathForSelectedRow else { return }
+            let question = questionController.questions[index.row]
+            
+            answerVC.question = question
         }
     }
 }

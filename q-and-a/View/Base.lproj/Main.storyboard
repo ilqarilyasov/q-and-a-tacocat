@@ -120,16 +120,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AtU-ap-LwS">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="J0t-Ka-3i5">
                                 <rect key="frame" x="16" y="116" width="343" height="330"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asker" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="334-i8-kWG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xi-am-n1I">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xi-am-n1I">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asker" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="334-i8-kWG">
                                         <rect key="frame" x="0.0" y="28.5" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -149,14 +149,15 @@
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="330" id="Q0T-b7-ecN"/>
+                                    <constraint firstAttribute="height" constant="330" id="QRc-GD-OGr"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AtU-ap-LwS" firstAttribute="leading" secondItem="Hmd-wG-lLn" secondAttribute="leading" constant="16" id="D76-oW-9zN"/>
-                            <constraint firstItem="AtU-ap-LwS" firstAttribute="top" secondItem="Hmd-wG-lLn" secondAttribute="top" id="nZo-af-hGK"/>
+                            <constraint firstItem="J0t-Ka-3i5" firstAttribute="leading" secondItem="Hmd-wG-lLn" secondAttribute="leading" constant="16" id="3NA-16-b1y"/>
+                            <constraint firstItem="Hmd-wG-lLn" firstAttribute="trailing" secondItem="J0t-Ka-3i5" secondAttribute="trailing" constant="16" id="E4C-Z0-srA"/>
+                            <constraint firstItem="J0t-Ka-3i5" firstAttribute="top" secondItem="Hmd-wG-lLn" secondAttribute="top" id="ou8-vL-hk0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hmd-wG-lLn"/>
                     </view>

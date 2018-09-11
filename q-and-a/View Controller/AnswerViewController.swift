@@ -23,11 +23,11 @@ class AnswerViewController: UIViewController {
     }
     
     @IBAction func submitAnswerBarButtonAction(_ sender: Any) {
-        guard let theQuestion = question,
+        guard let theQuestion = self.question,
               let answerer = answererNameTextField.text,
               let answer = answerTextView.text else { return }
         
-        if answer == "" && answerer == "" {
+        if answer != "" && answerer != "" {
             questionController?.updateQuestion(question: theQuestion, answer: answer, answerer: answerer)
         }
         
